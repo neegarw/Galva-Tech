@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .bg-stripe {
+    background-image: repeating-linear-gradient(-45deg,
+        #1a1a1a 0px,
+        #1a1a1a 10px,
+        #333333 10px,
+        #333333 20px);
+    background-size: 200% 200%;
+  }
+
+  @keyframes stripe-move {
+    0% {
+      background-position: 0% 0%;
+    }
+
+    100% {
+      background-position: -100% 0%;
+    }
+  }
+
+  .animate-stripe-move {
+    animation: stripe-move 3s linear infinite;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 11px !important;
+  height: 11px !important;
+  background: #fff !important;
+  opacity: .7 !important;
+  margin-top: 10px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #fff !important;
+  opacity: .7 !important;
+  outline: #fff solid 1px !important;
+  outline-offset: 4px !important;
+}
+
+.hero-pagination-active-bullet {
+  outline: #fff solid 1px !important;
+  outline-offset: 4px !important;
+}
