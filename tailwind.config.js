@@ -5,6 +5,7 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
     "./**/*.htm" // bütün HTML fayllar üçün
   ],
+  
   safelist: [
     "swiper-pagination-bullet",
     "swiper-pagination-bullet-active"
@@ -15,6 +16,7 @@ export default {
         montserrat: ['Montserrat', 'sans-serif'],
       },
     },
+    
   },
   plugins: [],
 }

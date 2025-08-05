@@ -83,7 +83,7 @@
         }
 
         .mySwiper2 .swiper-slide {
-            width: 300px !important;
+            /* width: 300px !important; */
             text-align: center;
             font-size: 18px;
             background: #fff;
@@ -144,179 +144,183 @@
 </head>
 
 <body>
-    <div>
-        <header id="mainHeader"
-            class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent text-white px-4 ">
-            <div class="container mx-auto flex flex-row items-center justify-between py-[20px]">
-                <div class="flex items-center gap-5">
-                    <div>
-                        <img id="logoImage" class="transition-all duration-300 filter brightness-0 invert"
-                            src="img/galvalogo.webp" alt="logo">
-                    </div>
-                    <nav class="hidden lg:flex">
-                        <ul class="flex gap-[23px] font-montserrat text-[15px] whitespace-nowrap font-medium">
-                            <li class="py-2">О компании</li>
-                            <li class="relative group cursor-pointer py-2">
-                                <div class="flex items-center gap-1">
-                                    Клиентам <i class="fa-solid fa-angle-down"></i>
-                                </div>
-                                <div
-                                    class="absolute left-0 top-full mt-2 bg-white shadow-lg p-3 rounded-md w-[150px] z-50 border-t-4 border-[#ECDD5D] opacity-0 invisible group-hover:opacity-100 group-hover:visible  transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0">
-                                    <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 rounded-md mb-2 text-sm text-[#404A3D] font-montserrat">Галерея</a>
-                                    <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 rounded-md text-sm text-[#404A3D] font-montserrat">Документы</a>
-                                </div>
-                            </li>
-                            <li class="py-2">Каталог</li>
-                            <li class="py-2">Видеобзоры</li>
-                            <li class="py-2">Блог</li>
-                        </ul>
-                    </nav>
+    <header id="mainHeader"
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent text-white px-4 ">
+        <div class="container mx-auto flex flex-row items-center justify-between py-[20px]">
+            <div class="flex items-center gap-5">
+                <div>
+                    <img id="logoImage" class="transition-all duration-300 filter brightness-0 invert cursor-pointer"
+                        src="img/galvalogo.webp" alt="logo">
                 </div>
-                <div class="flex items-center gap-[7px]">
+                <nav class="hidden lg:flex">
+                    <ul class="flex gap-[23px] font-montserrat text-[15px] whitespace-nowrap font-medium">
+                        <li class="py-2 cursor-pointer">О компании</li>
+                        <li class="relative group cursor-pointer py-2">
+                            <div class="flex items-center gap-1 cursor-pointer">
+                                Клиентам <i class="fa-solid fa-angle-down"></i>
+                            </div>
+                            <div
+                                class="absolute left-0 top-full mt-2 bg-white shadow-lg p-3 rounded-md w-[150px] z-50 border-t-4 border-[#ECDD5D] opacity-0 invisible group-hover:opacity-100 group-hover:visible  transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0">
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 rounded-md mb-2 text-sm text-[#404A3D] font-montserrat">Галерея</a>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 rounded-md text-sm text-[#404A3D] font-montserrat">Документы</a>
+                            </div>
+                        </li>
+                        <li class="py-2 cursor-pointer">Каталог</li>
+                        <li class="py-2 cursor-pointer">Видеобзоры</li>
+                        <li class="py-2 cursor-pointer">Блог</li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="flex items-center gap-[7px]">
+                <div class="flex items-center cursor-pointer">
                     <span><i class="fa-brands fa-whatsapp text-[23px]"></i></span>
                     <div class="flex flex-col font-montserrat whitespace-nowrap">
                         <span>+7 905 555 60 25</span>
                         <span>пн-пт: 9:00-18:00</span>
                     </div>
-                    <span id="openSidebar" class="block lg:hidden cursor-pointer"><i
-                            class="fa-solid fa-bars text-[20px] font-light"></i></span>
-                    <div id="sidebar"
-                        class="fixed top-0 right-0 h-full w-[350px] max-w-full bg-white shadow-lg z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
-                        <div class="px-5 pt-5 flex justify-between items-center ">
-                            <div class="border-b-[1px] border-gray-200 w-full flex items-center justify-between">
-                                <div><img class="w-[150px] h-[60px]" src="img/galvalogo.webp" alt="logo"></div>
-                                <button id="closeSidebar" class="text-[#16113B] text-xl">
-                                    <i class="fa-solid fa-xmark"></i>
-                                </button>
+                </div>
+                <span id="openSidebar" class="block lg:hidden cursor-pointer"><i
+                        class="fa-solid fa-bars text-[20px] font-light"></i></span>
+                <div id="sidebar"
+                    class="fixed top-0 right-0 h-full w-[350px] max-w-full bg-white shadow-lg z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+                    <div class="px-5 pt-5 flex justify-between items-center ">
+                        <div class="border-b-[1px] border-gray-200 w-full flex items-center justify-between">
+                            <div><img class="w-[150px] h-[60px] cursor-pointer" src="img/galvalogo.webp" alt="logo">
                             </div>
+                            <button id="closeSidebar" class="text-[#16113B] text-xl cursor-pointer">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
                         </div>
-                        <ul class="px-5 flex flex-col font-montserrat text-[#404A3D] text-[16px]">
-                            <li class="border-b-[1px] border-gray-200 py-3"><a href="#">О компании</a></li>
-                            <li class="flex flex-col border-b-[1px] border-gray-200 py-3">
-                                <button id="toggleSubmenu"
-                                    class="flex items-center justify-between w-full text-left text-[#404A3D]">
-                                    Клиентам <i class="fa-solid fa-angle-down transition-transform" id="arrowIcon"></i>
-                                </button>
+                    </div>
+                    <ul class="px-5 flex flex-col font-montserrat text-[#404A3D] text-[16px]">
+                        <li class="border-b-[1px] border-gray-200 py-3 cursor-pointer"><a href="#">О компании</a></li>
+                        <li class="flex flex-col border-b-[1px] border-gray-200 py-3 cursor-pointer">
+                            <button id="toggleSubmenu"
+                                class="flex items-center justify-between w-full text-left text-[#404A3D]">
+                                Клиентам <i class="fa-solid fa-angle-down transition-transform" id="arrowIcon"></i>
+                            </button>
+                        </li>
+                        <ul id="submenu" class="flex-col pl-4 mt-2 hidden">
+                            <li class="w-full border-b-[1px] py-3 border-gray-200 cursor-pointer">
+                                <a href="#" class="text-[#404A3D]">Галерея</a>
                             </li>
-                            <ul id="submenu" class="flex-col pl-4 mt-2 hidden">
-                                <li class="w-full border-b-[1px] py-3 border-gray-200"><a href="#"
-                                        class="text-[#404A3D]">Галерея</a></li>
-                                <li class="w-full border-b-[1px] py-3 border-gray-200"><a href="#"
-                                        class="text-[#404A3D]">Документы</a></li>
-                            </ul>
-                            <li class="border-b-[1px] border-gray-200 py-3"><a href="#">Каталог</a></li>
-                            <li class="border-b-[1px] border-gray-200 py-3"><a href="#">Видеобзоры</a></li>
-                            <li class="border-b-[1px] border-gray-200 py-3"><a href="#">Блог</a></li>
+                            <li class="w-full border-b-[1px] py-3 border-gray-200 cursor-pointer">
+                                <a href="#" class="text-[#404A3D]">Документы</a>
+                            </li>
                         </ul>
+                        <li class="border-b-[1px] border-gray-200 py-3 cursor-pointer"><a href="#">Каталог</a></li>
+                        <li class="border-b-[1px] border-gray-200 py-3 cursor-pointer"><a href="#">Видеобзоры</a></li>
+                        <li class="border-b-[1px] border-gray-200 py-3 cursor-pointer"><a href="#">Блог</a></li>
+                    </ul>
+                    <button class="relative overflow-hidden px-6 py-3 rounded-xl text-white font-semibold mt-5 mx-5">
+                        <span class="relative z-10">Получить консультацию</span>
+                        <span class="absolute inset-0 z-0 bg-stripe animate-stripe-move rounded-xl"></span>
+                    </button>
+                </div>
+                <button id="consultBtn"
+                    class="bg-white py-[10px] px-[25px] font-montserrat text-[#16113B] text-[16px] rounded-[7px] hidden lg:flex ml-3">Получить
+                    консультацию</button>
+            </div>
+        </div>
+    </header>
+    <main class="px-4 py-4 h-[105vh] bg-white">
+        <div class="swiper mySwiper1 rounded-[40px]">
+            <div class="swiper-wrapper rounded-[40px]">
+                <div class="swiper-slide">
+                    <img class="rounded-[40px]" src="img/slider1.jpg" alt="">
+                    <div class="absolute w-full h-full bg-black bg-opacity-40 z-10"></div>
+                    <div class="absolute z-10 top-[200px] left-0 px-[30px] flex flex-col items-start">
+                        <h3
+                            class="text-[30px] sm:text-[60px] text-left font-montserrat text-white font-bold lg:w-[60%] w-full">
+                            Полное техническое сопровождение
+                        </h3>
+                        <p class="text-left lg:w-[60%] w-full font-montserrat text-white">
+                            Гальваническое оборудование из химически стойких материалов с повышенной изностойкостью
+                            и долгим сроком службы.
+                        </p>
                         <button
-                            class="relative overflow-hidden px-6 py-3 rounded-xl text-white font-semibold mt-5 mx-5">
-                            <span class="relative z-10">Получить консультацию</span>
-                            <span class="absolute inset-0 z-0 bg-stripe animate-stripe-move rounded-xl"></span>
+                            class="relative overflow-hidden px-6 py-2 mt-4 font-montserrat rounded-md text-[#16113B] bg-white transition-all duration-500 group">
+                            <span class="relative z-10 group-hover:text-white transition-colors duration-500">
+                                Получить консультацию
+                            </span>
+                            <span
+                                class="absolute inset-0 bg-[#16113B] w-full h-full z-0 scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500"></span>
                         </button>
-
-                    </div>
-                    <button id="consultBtn"
-                        class="bg-white py-[10px] px-[25px] font-montserrat text-[#16113B] text-[16px] rounded-[7px] hidden lg:flex ml-3">Получить
-                        консультацию</button>
-                </div>
-            </div>
-        </header>
-        <main class="px-4 py-4 h-[105vh] bg-white">
-            <div class="swiper mySwiper1 rounded-[40px]">
-                <div class="swiper-wrapper rounded-[40px]">
-                    <div class="swiper-slide">
-                        <img class="rounded-[40px]" src="img/slider1.jpg" alt="">
-                        <div class="absolute w-full h-full bg-black bg-opacity-40 z-10"></div>
-                        <div class="absolute z-10 top-[200px] left-0 px-[30px] flex flex-col items-start">
-                            <h3
-                                class="text-[30px] sm:text-[60px] text-left font-montserrat text-white font-bold lg:w-[60%] w-full">
-                                Полное техническое сопровождение
-                            </h3>
-                            <p class="text-left lg:w-[60%] w-full font-montserrat text-white">
-                                Гальваническое оборудование из химически стойких материалов с повышенной изностойкостью
-                                и долгим сроком службы.
-                            </p>
-                            <button
-                                class="relative overflow-hidden px-6 py-2 mt-4 font-montserrat rounded-md text-[#16113B] bg-white transition-all duration-500 group">
-                                <span class="relative z-10 group-hover:text-white transition-colors duration-500">
-                                    Получить консультацию
-                                </span>
-                                <span
-                                    class="absolute inset-0 bg-[#16113B] w-full h-full z-0 scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500"></span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="rounded-[40px]" src="img/slider2.webp" alt="">
-                        <div class="absolute w-full h-full bg-black bg-opacity-40 z-10"></div>
-                        <div class="absolute z-10 top-[200px] left-0 px-[30px] flex flex-col items-start">
-                            <h3
-                                class="text-[30px] sm:text-[60px] text-left font-montserrat text-white font-bold lg:w-[60%] w-full">
-                                Полное техническое сопровождение
-                            </h3>
-                            <p class="text-left lg:w-[60%] w-full font-montserrat text-white">
-                                Гальваническое оборудование из химически стойких материалов с повышенной изностойкостью
-                                и долгим сроком службы.
-                            </p>
-                            <button
-                                class="relative overflow-hidden px-6 py-2 mt-4 font-montserrat rounded-md text-[#16113B] bg-white transition-all duration-500 group">
-                                <span class="relative z-10 group-hover:text-white transition-colors duration-500">
-                                    Получить консультацию
-                                </span>
-                                <span
-                                    class="absolute inset-0 bg-[#16113B] w-full h-full z-0 scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500"></span>
-                            </button>
-                        </div>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </main>
-        <div class="bg-white">
-            <div class="container mx-auto font-montserrat text-black min-h-[80vh]">
-                <h2 class="sm:text-[30px] text-[18px] font-semibold py-[30px] uppercase">Прайс-лист и коммерческое
-                    предложение</h2>
-                <div class="flex flex-col xl:flex-row justify-between">
-                    <div class="xl:w-[50%]">
-                        <p class="font-bold text-[18px] py-[10px]">
-                            Для получения полной информации о ценах, технических характеристиках и условиях поставки -
-                            скачайте ниже прайс-лист и коммерческое предложение, содержащие полный ассортимент
-                            гальванического оборудования и сопутствующих расходных материалов.
+                <div class="swiper-slide">
+                    <img class="rounded-[40px]" src="img/slider2.webp" alt="">
+                    <div class="absolute w-full h-full bg-black bg-opacity-40 z-10"></div>
+                    <div class="absolute z-10 top-[200px] left-0 px-[30px] flex flex-col items-start">
+                        <h3
+                            class="text-[30px] sm:text-[60px] text-left font-montserrat text-white font-bold lg:w-[60%] w-full">
+                            Полное техническое сопровождение
+                        </h3>
+                        <p class="text-left lg:w-[60%] w-full font-montserrat text-white">
+                            Гальваническое оборудование из химически стойких материалов с повышенной изностойкостью
+                            и долгим сроком службы.
                         </p>
-                        <p class="text-[16px] py-[10px]">
-                            Ниже представленные документы содержат актуальную информацию, подробные спецификации,
-                            условия
-                            эксплуатации, требования к помещению и иные необходимые данные для ознакомления и
-                            дальнейшего
-                            эффективного сотрудничества.
-                        </p>
-                        <div class="flex flex-col gap-4 py-4">
-                            <div
-                                class="flex items-center px-8 py-8  text-[16px] font-bold justify-between border-[16px] border-[#F5F5F5] rounded-[30px]">
-                                <div class="flex items-center flex-col sm:flex-row">
-                                    <span><img src="img/pdflogo.svg" alt=""></span>
-                                    <span class="hover:text-[#ED1C24] transition px-3">Прайс-лист</span>
-                                </div>
-                                <span><i class="fa-solid fa-download text-[#ed1c24] text-[18px]"></i></span>
-                            </div>
-                            <div
-                                class="flex items-center px-8 py-8  text-[16px] font-bold justify-between border-[16px] border-[#F5F5F5] rounded-[30px]">
-                                <div class="flex items-center">
-                                    <span><img src="img/pdflogo.svg" alt=""></span>
-                                    <span class="hover:text-[#ED1C24] transition px-3">Прайс-лист</span>
-                                </div>
-                                <span><i class="fa-solid fa-download text-[#ed1c24] text-[18px]"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="xl:w-[48%]">
-                        <img class="h-[200px] sm:h-[400px] lg:h-[500px] xl:h-[600px] w-full object-cover rounded-3xl"
-                            src="img/main2.jpeg" alt="">
+                        <button
+                            class="relative overflow-hidden px-6 py-2 mt-4 font-montserrat rounded-md text-[#16113B] bg-white transition-all duration-500 group">
+                            <span class="relative z-10 group-hover:text-white transition-colors duration-500">
+                                Получить консультацию
+                            </span>
+                            <span
+                                class="absolute inset-0 bg-[#16113B] w-full h-full z-0 scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500"></span>
+                        </button>
                     </div>
                 </div>
             </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </main>
+    <div class="bg-white">
+        <div class="container mx-auto font-montserrat text-black min-h-[80vh]">
+            <h2 class="sm:text-[30px] text-[18px] font-semibold py-[30px] uppercase  px-4 md:px-0">Прайс-лист и
+                коммерческое
+                предложение</h2>
+            <div class="flex flex-col xl:flex-row justify-between">
+                <div class="xl:w-[50%] px-4 md:px-0">
+                    <p class="font-bold text-[18px] py-[10px]">
+                        Для получения полной информации о ценах, технических характеристиках и условиях поставки -
+                        скачайте ниже прайс-лист и коммерческое предложение, содержащие полный ассортимент
+                        гальванического оборудования и сопутствующих расходных материалов.
+                    </p>
+                    <p class="text-[16px] py-[10px]">
+                        Ниже представленные документы содержат актуальную информацию, подробные спецификации,
+                        условия
+                        эксплуатации, требования к помещению и иные необходимые данные для ознакомления и
+                        дальнейшего
+                        эффективного сотрудничества.
+                    </p>
+                    <div class="flex flex-col gap-4 py-4">
+                        <a href="files/Прайс лист.pdf" download=""
+                            class="flex items-center px-8 py-8  text-[16px] font-bold justify-between border-[16px] border-[#F5F5F5] rounded-[30px]">
+                            <div class="flex items-center flex-col sm:flex-row">
+                                <span><img src="img/pdflogo.svg" alt=""></span>
+                                <span class="hover:text-[#ED1C24] transition px-3">Прайс-лист</span>
+                            </div>
+                            <span><i class="fa-solid fa-download text-[#ed1c24] text-[18px]"></i></span>
+                        </a>
+                        <a href="files/Коммерческое предложение.pdf" download=""
+                            class="flex items-center px-8 py-8  text-[16px] font-bold justify-between border-[16px] border-[#F5F5F5] rounded-[30px]">
+                            <div class="flex items-center">
+                                <span><img src="img/pdflogo.svg" alt=""></span>
+                                <span class="hover:text-[#ED1C24] transition px-3">Коммерческое предложение</span>
+                            </div>
+                            <span><i class="fa-solid fa-download text-[#ed1c24] text-[18px]"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="xl:w-[48%]">
+                    <img class="h-[200px] sm:h-[400px] lg:h-[500px] xl:h-[600px] w-[95%] mx-auto object-cover rounded-3xl"
+                        src="img/main2.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="px-4 md:px-0">
             <div class="mx-auto container bg-[#16113B] font-montserrat text-white px-4 py-8 rounded-2xl my-4">
                 <div class="flex flex-col sm:flex-row justify-between items-start">
                     <h3
@@ -341,7 +345,7 @@
                     </div>
                     <div class="lg:w-[48%] space-y-2 flex flex-col justify-between my-4">
                         <div
-                            class="flex flex-col feature-item group lg:flex-row items-center justify-between py-4 border-b-[.5px] border-white hover:bg-white hover:rounded-[10px] transition-all duration-300 ease-in-out">
+                            class="flex flex-col feature-item group lg:flex-row items-center justify-between py-4 border-b-[.5px] border-white hover:bg-white hover:rounded-[10px] transition-all duration-300 ease-in-out cursor-pointer">
                             <div
                                 class="flex items-center gap-2 lg:w-[25%] px-3 group-hover:text-[#16113B] transition-all duration-300 ease-in-out">
                                 <img src="img/flat1.png" alt="" data-img="img/flat1.png"
@@ -353,7 +357,7 @@
                                 От чертежа - до готового оборудования.</div>
                         </div>
                         <div
-                            class="flex flex-col feature-item group lg:flex-row items-center justify-between py-4 border-b-[.5px] border-white hover:bg-white hover:rounded-[10px] transition-all duration-300 ease-in-out">
+                            class="flex flex-col feature-item group lg:flex-row items-center justify-between py-4 border-b-[.5px] border-white hover:bg-white hover:rounded-[10px] transition-all duration-300 ease-in-out cursor-pointer">
                             <div
                                 class="flex items-center gap-2 lg:w-[25%] px-3 group-hover:text-[#16113B] transition-all duration-300 ease-in-out">
                                 <img src="img/flat2.png" alt="" data-img="img/flat2.png"
@@ -365,7 +369,7 @@
                                 Придержиаемся принципа цена-качество.</div>
                         </div>
                         <div
-                            class="flex flex-col feature-item group lg:flex-row items-center justify-between py-4 border-b-[.5px] border-white hover:bg-white hover:rounded-[10px] transition-all duration-300 ease-in-out">
+                            class="flex flex-col feature-item group lg:flex-row items-center justify-between py-4 border-b-[.5px] border-white hover:bg-white hover:rounded-[10px] transition-all duration-300 ease-in-out cursor-pointer">
                             <div
                                 class="flex items-center gap-2 lg:w-[25%] px-3 group-hover:text-[#16113B] transition-all duration-300 ease-in-out">
                                 <img src="img/flat3.png" alt="" data-img="img/flat3.png"
@@ -377,7 +381,7 @@
                                 Поставка оборудования в срок до 30 рабочих дней.</div>
                         </div>
                         <div
-                            class="flex flex-col feature-item group lg:flex-row items-center justify-between py-4 hover:bg-white hover:rounded-[10px] transition-all duration-300 ease-in-out">
+                            class="flex flex-col feature-item group lg:flex-row items-center justify-between py-4 hover:bg-white hover:rounded-[10px] transition-all duration-300 ease-in-out cursor-pointer">
                             <div
                                 class="flex items-center gap-2 lg:w-[25%] px-3 group-hover:text-[#16113B] transition-all duration-300 ease-in-out">
                                 <img src="img/flat4.png" alt="" data-img="img/flat4.png"
@@ -391,213 +395,331 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col lg:flex-row font-montserrat py-9 container mx-auto">
-                <div class="text-[#16113b] text-[2rem] font-bold px-4">
-                    <h4>Этапы сотрудничества</h4>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
-                    <div class="bg-[#16113B] text-white p-4 rounded-xl">
-                        <h5 class="text-[3.2rem]">01</h5>
-                        <h6 class="text-[1rem]">Оформление заявки</h6>
-                        <p class="text-[.9rem]">После получения вашей заявки, наш менеджер оперативно свяжется с вами
-                            для уточнения всех необходимых деталей и предоставления дополнительной
-                            информации,обеспечивая максимально эффективное и своевременное обслуживание.</p>
-                    </div>
-                    <div
-                        class="text-[#16113B] bg-white border border-[#16113B] group hover:bg-[#16113b] hover:text-white transition-all duration-500 ease-in-out p-4 rounded-xl">
-                        <h5 class="text-[3.2rem]">02</h5>
-                        <h6 class="text-[1rem]">Подбор оборудования</h6>
-                        <p class="text-[.9rem]">Мы обеспечим подбор оборудования, соответствующего вашим требованиям, и
-                            предоставим квалифицированные консультации по его эксплуатации и техническому обслуживанию,
-                            гарантируя оптимальное решение для вас и вашего бизнеса.</p>
-                    </div>
-                    <div
-                        class="text-[#16113B] bg-white border border-[#16113B] group hover:bg-[#16113b] hover:text-white transition-all duration-500 ease-in-out p-4 rounded-xl">
-                        <h5 class="text-[3.2rem]">03</h5>
-                        <h6 class="text-[1rem]">Совершение сделки</h6>
-                        <p class="text-[.9rem]">После согласования условий сотрудничества мы направим вам договор для
-                            ознакомления и подписания, а также выставим счет на оплату авансового платежа.</p>
-                    </div>
-                    <div
-                        class="text-[#16113B] bg-white border border-[#16113B] group hover:bg-[#16113b] hover:text-white transition-all duration-500 ease-in-out p-4 rounded-xl">
-                        <h5 class="text-[3.2rem]">04</h5>
-                        <h6 class="text-[1rem]">Отгрузка оборудования</h6>
-                        <p class="text-[.9rem]">Проинформируем вас о готовности оборудования к отгрузке и обеспечим
-                            подготовку полного пакета закрывающих документов, необходимых для своевременного и
-                            корректного оформления поставки.</p>
-                    </div>
-                    <div
-                        class="text-[#16113B] bg-white border border-[#16113B] group hover:bg-[#16113b] hover:text-white transition-all duration-500 ease-in-out p-4 rounded-xl">
-                        <h5 class="text-[3.2rem]">05</h5>
-                        <h6 class="text-[1rem]">Обучение</h6>
-                        <p class="text-[.9rem]">Организуем обучение на территории нашего предприятия либо в
-                            дистанционном формате с использованием фото- и видеосвязи, а также окажем поддержку при
-                            проведении пуско-наладочных работ для обеспечения эффективной эксплуатации оборудования.</p>
-                    </div>
-                    <div
-                        class="text-[#16113B] bg-white border border-[#16113B] group hover:bg-[#16113b] hover:text-white transition-all duration-500 ease-in-out p-4 rounded-xl">
-                        <h5 class="text-[3.2rem]">06</h5>
-                        <h6 class="text-[1rem]">Поддержка</h6>
-                        <p class="text-[.9rem]">Обеспечим поддержку на всех этапах сотрудничества, предоставим
-                            консультации по эксплуатации оборудования, а для оперативного решения возникающих вопросов с
-                            вами будет на связи опытный технолог.</p>
-                    </div>
-                </div>
+        </div>
+        <div class="flex flex-col lg:flex-row font-montserrat py-9 container mx-auto">
+            <div class="text-[#16113b] text-[2rem] font-bold px-4">
+                <h4>Этапы сотрудничества</h4>
             </div>
-            <div class="bg-[#F6F7F8]">
-                <div class="container mx-auto py-8">
-                    <h2 class="text-[20px] lg:text-[28px] font-montserrat text-[#404A3D]">Каталог</h2>
-                    <div #swiperRef="" class="swiper mySwiper2">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide rounded-lg">
-                                <div
-                                    class="flex flex-col group justify-between bg-white font-montserrat text-left px-4 py-4 h-full rounded-lg">
-                                    <div>
-                                        <img class="w-full h-[70%]" src="img/product1.png" alt="">
-                                        <h6 class="lg:text-[18px] text-[14px] text-[#404A3D] py-3">Гальваническая линия
-                                            никелирования латуни</h6>
-                                    </div>
-                                    <div>
-                                        <h2 class="text-[#212529] lg:text-[29px] text-[20px] font-semibold py-2">от
-                                            283697 ₽</h2>
-                                        <p class="text-[#808080] text-[12px]">Гальваническая линия никелирования...</p>
-                                        <button
-                                            class="bg-[#16113B] text-white px-6 py-1 rounded-full w-full my-2 group-hover:bg-[#EDDC5E] transition-all ease-in-out duration-300 ">Подробнее</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide rounded-lg">
-                                <div
-                                    class="flex flex-col group justify-between bg-white font-montserrat text-left px-4 py-4 h-full rounded-lg">
-                                    <div>
-                                        <img class="w-full h-[70%]" src="img/product1.png" alt="">
-                                        <h6 class="lg:text-[18px] text-[14px] text-[#404A3D] py-3">Гальваническая линия
-                                            никелирования латуни</h6>
-                                    </div>
-                                    <div>
-                                        <h2 class="text-[#212529] lg:text-[29px] text-[20px] font-semibold py-2">от
-                                            283697 ₽</h2>
-                                        <p class="text-[#808080] text-[12px]">Гальваническая линия никелирования...</p>
-                                        <button
-                                            class="bg-[#16113B] text-white px-6 py-1 rounded-full w-full my-2 group-hover:bg-[#EDDC5E] transition-all ease-in-out duration-300 ">Подробнее</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide rounded-lg">
-                                <div
-                                    class="flex flex-col group justify-between bg-white font-montserrat text-left px-4 py-4 h-full rounded-lg">
-                                    <div>
-                                        <img class="w-full h-[70%]" src="img/product1.png" alt="">
-                                        <h6 class="lg:text-[18px] text-[14px] text-[#404A3D] py-3">Гальваническая линия
-                                            никелирования латуни</h6>
-                                    </div>
-                                    <div>
-                                        <h2 class="text-[#212529] lg:text-[29px] text-[20px] font-semibold py-2">от
-                                            283697 ₽</h2>
-                                        <p class="text-[#808080] text-[12px]">Гальваническая линия никелирования...</p>
-                                        <button
-                                            class="bg-[#16113B] text-white px-6 py-1 rounded-full w-full my-2 group-hover:bg-[#EDDC5E] transition-all ease-in-out duration-300 ">Подробнее</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide rounded-lg">
-                                <div
-                                    class="flex flex-col group justify-between bg-white font-montserrat text-left px-4 py-4 h-full rounded-lg">
-                                    <div>
-                                        <img class="w-full h-[70%]" src="img/product1.png" alt="">
-                                        <h6 class="lg:text-[18px] text-[14px] text-[#404A3D] py-3">Гальваническая линия
-                                            никелирования латуни</h6>
-                                    </div>
-                                    <div>
-                                        <h2 class="text-[#212529] lg:text-[29px] text-[20px] font-semibold py-2">от
-                                            283697 ₽</h2>
-                                        <p class="text-[#808080] text-[12px]">Гальваническая линия никелирования...</p>
-                                        <button
-                                            class="bg-[#16113B] text-white px-6 py-1 rounded-full w-full my-2 group-hover:bg-[#EDDC5E] transition-all ease-in-out duration-300 ">Подробнее</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide rounded-lg">
-                                <div
-                                    class="flex flex-col group justify-between bg-white font-montserrat text-left px-4 py-4 h-full rounded-lg">
-                                    <div>
-                                        <img class="w-full h-[70%]" src="img/product1.png" alt="">
-                                        <h6 class="lg:text-[18px] text-[14px] text-[#404A3D] py-3">Гальваническая линия
-                                            никелирования латуни</h6>
-                                    </div>
-                                    <div>
-                                        <h2 class="text-[#212529] lg:text-[29px] text-[20px] font-semibold py-2">от
-                                            283697 ₽</h2>
-                                        <p class="text-[#808080] text-[12px]">Гальваническая линия никелирования...</p>
-                                        <button
-                                            class="bg-[#16113B] text-white px-6 py-1 rounded-full w-full my-2 group-hover:bg-[#EDDC5E] transition-all ease-in-out duration-300 ">Подробнее</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+                <div class="bg-[#16113B] text-white p-4 rounded-xl">
+                    <h5 class="text-[3.2rem]">01</h5>
+                    <h6 class="text-[1rem]">Оформление заявки</h6>
+                    <p class="text-[.9rem]">После получения вашей заявки, наш менеджер оперативно свяжется с вами
+                        для уточнения всех необходимых деталей и предоставления дополнительной
+                        информации,обеспечивая максимально эффективное и своевременное обслуживание.</p>
                 </div>
-            </div>
-            <div class="container mx-auto py-10">
-                <h2 class="font-montserrat text-[20px] md:text-[29px] text-[#404A3D] py-5">Применение гальванических
-                    покрытий</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                    <div
-                        class="bg-[#FCFAFB] rounded-xl flex flex-col items-center justify-center hover:shadow-2xl transition-all ease-in-out duration-300 font-montserrat text-black py-5">
-                        <img src="img/mebel1.jpg" alt="">
-                        <h4 class="text-[16px] font-semibold">Швейная фурнитура</h4>
-                        <p class="font-light text-center px-6">(пряжки для ремней, пуговицы, декоративные элементы)</p>
-                    </div>
-                    <div
-                        class="bg-[#FCFAFB] rounded-xl flex flex-col items-center justify-center hover:shadow-2xl transition-all ease-in-out duration-300 font-montserrat text-black py-5">
-                        <img src="img/mebel2.jpg" alt="">
-                        <h4 class="text-[16px] font-semibold">Технические изделия</h4>
-                        <p class="font-light text-center px-6">(кронштейны, переходники, прочее)</p>
-                    </div>
-                    <div
-                        class="bg-[#FCFAFB] rounded-xl flex flex-col items-center justify-center hover:shadow-2xl transition-all ease-in-out duration-300 font-montserrat text-black py-5">
-                        <img src="img/mebel3.jpg" alt="">
-                        <h4 class="text-[16px] font-semibold">Сувенирная продукция</h4>
-                        <p class="font-light text-center px-6">(магниты, брелоки, кулоны, значки, фигурки, шильдики,
-                            монеты)</p>
-                    </div>
-                    <div
-                        class="bg-[#FCFAFB] rounded-xl flex flex-col items-center justify-center hover:shadow-2xl transition-all ease-in-out duration-300 font-montserrat text-black py-5">
-                        <img src="img/mebel4.jpg" alt="">
-                        <h4 class="text-[16px] font-semibold">Рыболовная продукция</h4>
-                        <p class="font-light text-center px-6">(блесна, груза, джиг головки, балансиры)</p>
-                    </div>
-                    <div
-                        class="bg-[#FCFAFB] rounded-xl flex flex-col items-center justify-center hover:shadow-2xl transition-all ease-in-out duration-300 font-montserrat text-black py-5">
-                        <img src="img/mebel5.jpg" alt="">
-                        <h4 class="text-[16px] font-semibold">Наградная продукция</h4>
-                        <p class="font-light text-center px-6">(медали, чемпионские пояса, медали, значки, элементы
-                            кубков)</p>
-                    </div>
-                    <div
-                        class="bg-[#FCFAFB] rounded-xl flex flex-col items-center justify-center hover:shadow-2xl transition-all ease-in-out duration-300 font-montserrat text-black py-5">
-                        <img src="img/mebel6.jpg" alt="">
-                        <h4 class="text-[16px] font-semibold">Мебельная фурнитура</h4>
-                        <p class="font-light text-center px-6">(крючки, ручки, декоративные элементы и прочее)</p>
-                    </div>
+                <div
+                    class="text-[#16113B] bg-white border border-[#16113B] group hover:bg-[#16113b] hover:text-white transition-all duration-500 ease-in-out p-4 rounded-xl">
+                    <h5 class="text-[3.2rem]">02</h5>
+                    <h6 class="text-[1rem]">Подбор оборудования</h6>
+                    <p class="text-[.9rem]">Мы обеспечим подбор оборудования, соответствующего вашим требованиям, и
+                        предоставим квалифицированные консультации по его эксплуатации и техническому обслуживанию,
+                        гарантируя оптимальное решение для вас и вашего бизнеса.</p>
                 </div>
-            </div>
-            <div class="bg-[#F6F7F8] h-[100px] text-[20px] md:text-[29px] font-montserrat text-[#404A3D]">
-                <div class="container mx-auto py-3">Видеобзоры</div>
-            </div>
-            <div class="bg-[#16113B] py-8">
-                <div class="bg-white container rounded-xl mx-auto">
-                    <div class="text-[24px] text-[#404A3D] flex items-center">
-                        <span class="text-[40px]">👋 </span>
-                        <span>Заполните все поля и мы с вами свяжемся!</span>
-                    </div>
-                    <form action="">
-                    </form>
+                <div
+                    class="text-[#16113B] bg-white border border-[#16113B] group hover:bg-[#16113b] hover:text-white transition-all duration-500 ease-in-out p-4 rounded-xl">
+                    <h5 class="text-[3.2rem]">03</h5>
+                    <h6 class="text-[1rem]">Совершение сделки</h6>
+                    <p class="text-[.9rem]">После согласования условий сотрудничества мы направим вам договор для
+                        ознакомления и подписания, а также выставим счет на оплату авансового платежа.</p>
+                </div>
+                <div
+                    class="text-[#16113B] bg-white border border-[#16113B] group hover:bg-[#16113b] hover:text-white transition-all duration-500 ease-in-out p-4 rounded-xl">
+                    <h5 class="text-[3.2rem]">04</h5>
+                    <h6 class="text-[1rem]">Отгрузка оборудования</h6>
+                    <p class="text-[.9rem]">Проинформируем вас о готовности оборудования к отгрузке и обеспечим
+                        подготовку полного пакета закрывающих документов, необходимых для своевременного и
+                        корректного оформления поставки.</p>
+                </div>
+                <div
+                    class="text-[#16113B] bg-white border border-[#16113B] group hover:bg-[#16113b] hover:text-white transition-all duration-500 ease-in-out p-4 rounded-xl">
+                    <h5 class="text-[3.2rem]">05</h5>
+                    <h6 class="text-[1rem]">Обучение</h6>
+                    <p class="text-[.9rem]">Организуем обучение на территории нашего предприятия либо в
+                        дистанционном формате с использованием фото- и видеосвязи, а также окажем поддержку при
+                        проведении пуско-наладочных работ для обеспечения эффективной эксплуатации оборудования.</p>
+                </div>
+                <div
+                    class="text-[#16113B] bg-white border border-[#16113B] group hover:bg-[#16113b] hover:text-white transition-all duration-500 ease-in-out p-4 rounded-xl">
+                    <h5 class="text-[3.2rem]">06</h5>
+                    <h6 class="text-[1rem]">Поддержка</h6>
+                    <p class="text-[.9rem]">Обеспечим поддержку на всех этапах сотрудничества, предоставим
+                        консультации по эксплуатации оборудования, а для оперативного решения возникающих вопросов с
+                        вами будет на связи опытный технолог.</p>
                 </div>
             </div>
         </div>
+        <div class="bg-[#F6F7F8]">
+            <div class="container mx-auto py-8 px-4 md:px-0">
+                <h2 class="text-[20px] lg:text-[28px] font-montserrat text-[#404A3D]">Каталог</h2>
+                <div #swiperRef="" class="swiper mySwiper2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide rounded-lg">
+                            <div
+                                class="flex flex-col group justify-between bg-white font-montserrat text-left px-4 py-4 h-full rounded-lg">
+                                <div>
+                                    <img class="w-full h-[60%]" src="img/product1.png" alt="">
+                                    <h6 class="lg:text-[18px] text-[14px] text-[#404A3D] py-3">Гальваническая линия
+                                        никелирования латуни</h6>
+                                </div>
+                                <div>
+                                    <h2 class="text-[#212529] lg:text-[29px] text-[20px] font-semibold py-2">от
+                                        283697 ₽</h2>
+                                    <p class="text-[#808080] text-[12px]">Гальваническая линия никелирования...</p>
+                                    <button
+                                        class="bg-[#16113B] text-white px-6 py-1 rounded-full w-full my-2 group-hover:bg-[#EDDC5E] transition-all ease-in-out duration-300 cursor-pointer">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide rounded-lg">
+                            <div
+                                class="flex flex-col group justify-between bg-white font-montserrat text-left px-4 py-4 h-full rounded-lg">
+                                <div>
+                                    <img class="w-full h-[70%]" src="img/product1.png" alt="">
+                                    <h6 class="lg:text-[18px] text-[14px] text-[#404A3D] py-3">Гальваническая линия
+                                        никелирования латуни</h6>
+                                </div>
+                                <div>
+                                    <h2 class="text-[#212529] lg:text-[29px] text-[20px] font-semibold py-2">от
+                                        283697 ₽</h2>
+                                    <p class="text-[#808080] text-[12px]">Гальваническая линия никелирования...</p>
+                                    <button
+                                        class="bg-[#16113B] text-white px-6 py-1 rounded-full w-full my-2 group-hover:bg-[#EDDC5E] transition-all ease-in-out duration-300 ">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide rounded-lg">
+                            <div
+                                class="flex flex-col group justify-between bg-white font-montserrat text-left px-4 py-4 h-full rounded-lg">
+                                <div>
+                                    <img class="w-full h-[70%]" src="img/product1.png" alt="">
+                                    <h6 class="lg:text-[18px] text-[14px] text-[#404A3D] py-3">Гальваническая линия
+                                        никелирования латуни</h6>
+                                </div>
+                                <div>
+                                    <h2 class="text-[#212529] lg:text-[29px] text-[20px] font-semibold py-2">от
+                                        283697 ₽</h2>
+                                    <p class="text-[#808080] text-[12px]">Гальваническая линия никелирования...</p>
+                                    <button
+                                        class="bg-[#16113B] text-white px-6 py-1 rounded-full w-full my-2 group-hover:bg-[#EDDC5E] transition-all ease-in-out duration-300 ">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide rounded-lg">
+                            <div
+                                class="flex flex-col group justify-between bg-white font-montserrat text-left px-4 py-4 h-full rounded-lg">
+                                <div>
+                                    <img class="w-full h-[70%]" src="img/product1.png" alt="">
+                                    <h6 class="lg:text-[18px] text-[14px] text-[#404A3D] py-3">Гальваническая линия
+                                        никелирования латуни</h6>
+                                </div>
+                                <div>
+                                    <h2 class="text-[#212529] lg:text-[29px] text-[20px] font-semibold py-2">от
+                                        283697 ₽</h2>
+                                    <p class="text-[#808080] text-[12px]">Гальваническая линия никелирования...</p>
+                                    <button
+                                        class="bg-[#16113B] text-white px-6 py-1 rounded-full w-full my-2 group-hover:bg-[#EDDC5E] transition-all ease-in-out duration-300 ">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide rounded-lg">
+                            <div
+                                class="flex flex-col group justify-between bg-white font-montserrat text-left px-4 py-4 h-full rounded-lg">
+                                <div>
+                                    <img class="w-full h-[70%]" src="img/product1.png" alt="">
+                                    <h6 class="lg:text-[18px] text-[14px] text-[#404A3D] py-3">Гальваническая линия
+                                        никелирования латуни</h6>
+                                </div>
+                                <div>
+                                    <h2 class="text-[#212529] lg:text-[29px] text-[20px] font-semibold py-2">от
+                                        283697 ₽</h2>
+                                    <p class="text-[#808080] text-[12px]">Гальваническая линия никелирования...</p>
+                                    <button
+                                        class="bg-[#16113B] text-white px-6 py-1 rounded-full w-full my-2 group-hover:bg-[#EDDC5E] transition-all ease-in-out duration-300 ">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto py-10">
+            <h2 class="font-montserrat text-[20px] md:text-[29px] text-[#404A3D] py-5 px-4 md:px-0">Применение
+                гальванических
+                покрытий</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div
+                    class="bg-[#FCFAFB] rounded-xl flex flex-col items-center justify-center hover:shadow-2xl transition-all ease-in-out duration-300 font-montserrat text-black py-5">
+                    <img src="img/mebel1.jpg" alt="">
+                    <h4 class="text-[16px] font-semibold">Швейная фурнитура</h4>
+                    <p class="font-light text-center px-6">(пряжки для ремней, пуговицы, декоративные элементы)</p>
+                </div>
+                <div
+                    class="bg-[#FCFAFB] rounded-xl flex flex-col items-center justify-center hover:shadow-2xl transition-all ease-in-out duration-300 font-montserrat text-black py-5">
+                    <img src="img/mebel2.jpg" alt="">
+                    <h4 class="text-[16px] font-semibold">Технические изделия</h4>
+                    <p class="font-light text-center px-6">(кронштейны, переходники, прочее)</p>
+                </div>
+                <div
+                    class="bg-[#FCFAFB] rounded-xl flex flex-col items-center justify-center hover:shadow-2xl transition-all ease-in-out duration-300 font-montserrat text-black py-5">
+                    <img src="img/mebel3.jpg" alt="">
+                    <h4 class="text-[16px] font-semibold">Сувенирная продукция</h4>
+                    <p class="font-light text-center px-6">(магниты, брелоки, кулоны, значки, фигурки, шильдики,
+                        монеты)</p>
+                </div>
+                <div
+                    class="bg-[#FCFAFB] rounded-xl flex flex-col items-center justify-center hover:shadow-2xl transition-all ease-in-out duration-300 font-montserrat text-black py-5">
+                    <img src="img/mebel4.jpg" alt="">
+                    <h4 class="text-[16px] font-semibold">Рыболовная продукция</h4>
+                    <p class="font-light text-center px-6">(блесна, груза, джиг головки, балансиры)</p>
+                </div>
+                <div
+                    class="bg-[#FCFAFB] rounded-xl flex flex-col items-center justify-center hover:shadow-2xl transition-all ease-in-out duration-300 font-montserrat text-black py-5">
+                    <img src="img/mebel5.jpg" alt="">
+                    <h4 class="text-[16px] font-semibold">Наградная продукция</h4>
+                    <p class="font-light text-center px-6">(медали, чемпионские пояса, медали, значки, элементы
+                        кубков)</p>
+                </div>
+                <div
+                    class="bg-[#FCFAFB] rounded-xl flex flex-col items-center justify-center hover:shadow-2xl transition-all ease-in-out duration-300 font-montserrat text-black py-5">
+                    <img src="img/mebel6.jpg" alt="">
+                    <h4 class="text-[16px] font-semibold">Мебельная фурнитура</h4>
+                    <p class="font-light text-center px-6">(крючки, ручки, декоративные элементы и прочее)</p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-[#F6F7F8] h-[100px] text-[20px] md:text-[29px] font-montserrat text-[#404A3D]">
+            <div class="container mx-auto py-3 px-4 md:px-0">Видеобзоры</div>
+        </div>
+        <div class="bg-[#16113B] py-8">
+            <div
+                class="bg-white container flex flex-col lg:flex-row rounded-xl gap-3 md:items-start items-stretch mx-auto font-montserrat px-8 py-20">
+                <div class="text-[24px] md:text-[40px] font-bold text-[#404A3D] flex items-start w-full lg:w-[50%]">
+                    <span class="text-[40px]">👋 </span>
+                    <div>Заполните все поля и мы с вами свяжемся!</div>
+                </div>
+                <form class="text-[#171717] flex flex-col items-stretch" action="">
+                    <div class="relative w-full h-[80px] bg-[#FAFAF9]">
+                        <textarea
+                            class="peer bg-[#FAFAF9] w-full h-[80px] py-5 px-5 rounded-lg border resize-none outline-none"
+                            name="" id="" required></textarea>
+                        <div
+                            class="absolute top-4 left-3 text-gray-500 transition-all duration-200 peer-focus:top-1 peer-focus:text-xs peer-valid:top-1 peer-valid:text-xs">
+                            Напишите как мы можем вам помочь</div>
+                    </div>
+                    <div class="flex w-full flex-col md:flex-row gap-4 mt-4">
+                        <div class="relative w-full md:w-[250px]">
+                            <input class="peer bg-[#FAFAF9] w-full h-[50px] py-5 px-5 rounded-lg border outline-none"
+                                type="text" name="" id="" required>
+                            <div
+                                class="absolute top-4 left-3 text-gray-500 transition-all duration-200 peer-focus:top-1 peer-focus:text-xs peer-valid:top-1 peer-valid:text-xs">
+                                Ваше имя</div>
+                        </div>
+                        <div class="relative w-full md:w-[250px]">
+                            <input class="peer bg-[#FAFAF9] w-full h-[50px] px-5 py-5 rounded-lg border outline-none"
+                                type="number" name="" id="" required>
+                            <div
+                                class="absolute top-4 left-3 text-gray-500 transition-all duration-200 peer-focus:top-1 peer-focus:text-xs peer-valid:top-1 peer-valid:text-xs">
+                                Номер телефона</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-4 mt-4 items-center">
+                        <div class="relative w-full md:w-[250px]">
+                            <input class="peer bg-[#FAFAF9] w-full h-[50px] py-5 px-5 rounded-lg border outline-none"
+                                type="email" name="" id="" required>
+                            <div
+                                class="absolute top-4 left-3 text-gray-500 transition-all duration-200 peer-focus:top-1 peer-focus:text-xs peer-valid:top-1 peer-valid:text-xs">
+                                Почта</div>
+                        </div>
+                        <button
+                            class="bg-[#16113B] w-full md:w-[250px] h-[42px] rounded-lg text-white mt-4 md:mt-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                            Получить консультацию
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <div class="font-montserrat px-4 py-8 container mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                    <!-- 1-ci blok -->
+                    <div class="col-span-1 md:col-span-2 lg:col-span-2">
+                        <div>
+                            <img src="img/galvalogo.webp" alt="">
+                        </div>
+                        <div class="mt-4 text-[#333] text-[16px]">
+                            Наша цель - предоставлять промышленным предприятиям полный цикл гальванических решений —
+                            от
+                            оборудования и расходников до техподдержки — с высоким качеством и оптимальной ценой.
+                        </div>
+                        <div class="flex gap-4 mt-4 text-xl">
+                            <div
+                                class="w-[40px] h-[40px] rounded-full bg-[#F8F7F0] text-[#16113B] flex items-center justify-center border border-[#16113B] hover:bg-[#16113B] hover:text-[#F8F7F0] transition-all ease-in-out duration-300">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div
+                                class="w-[40px] h-[40px] rounded-full bg-[#F8F7F0] text-[#16113B] flex items-center justify-center border border-[#16113B] hover:bg-[#16113B] hover:text-[#F8F7F0] transition-all ease-in-out duration-300">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div
+                                class="w-[40px] h-[40px] rounded-full bg-[#F8F7F0] text-[#16113B] flex items-center justify-center border border-[#16113B] hover:bg-[#16113B] hover:text-[#F8F7F0] transition-all ease-in-out duration-300">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-1">
+                        <div class="font-semibold mb-5 text-[20px] text-[#404A3D]">О компании</div>
+                        <div class="flex flex-col gap-2 text-sm text-[#333]">
+                            <span>О компании</span>
+                            <span>Галерея</span>
+                            <span>Документы</span>
+                            <span>Каталог</span>
+                            <span>Блог</span>
+                        </div>
+                    </div>
+                    <div class="col-span-1">
+                        <div class="font-semibold mb-5 text-[20px] text-[#404A3D]">Режим работы</div>
+                        <div class="flex flex-col gap-3 text-sm text-[#333]">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>Режим работы пн-пт 9:00-18:00</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span>info@galva-tech.ru</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-phone-volume"></i>
+                                <span>+7 905 555 60 25</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                        <div class="font-semibold mb-5 text-[20px] text-[#404A3D]">Адрес</div>
+                        <div class="flex items-start  gap-2 text-sm text-[#333]">
+                            <i class="fa-solid fa-location-dot py-2"></i>
+                            <span>Московская область, г.о. Солнечногорск, пгт. Андреевка, д.31в</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mx-auto container">
+                <hr>
+            </div>
+            <div
+                class="container mx-auto flex flex-col-reverse lg:flex-row justify-between items-start py-6 px-4 md:px-0 gap-3">
+                <div class="text-[16px] font-montserrat text-[#404A3D]">
+                    <span class="px-1">© 2025</span>
+                    <span class="underline hover:no-underline font-semibold">Galva Technologies</span>
+                </div>
+                <div>
+                    <img class="w-[150px] h-[43px] object-cover" src="img/jeywa-logo.webp" alt="">
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 <script src="script.js"></script>
@@ -626,18 +748,25 @@
             disableOnInteraction: false,
         },
         breakpoints: {
-            1024: {
-                slidesPerView: 4,
-            },
-            768: {
-                slidesPerView: 2,
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 10, // Mobil üçün boşluq sıfırlanır
             },
             480: {
-                slidesPerView: 1,
+                slidesPerView: 2,
+                spaceBetween: 0,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 25,
             },
         },
     });
-
 </script>
+
 
 </html>
