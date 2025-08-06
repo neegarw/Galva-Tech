@@ -2,23 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-    <link href="./output.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dearflip@2.0.0/dist/jquery.dearflip.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
-    <script>
-        const pdfjsLib = window["pdfjs-dist/build/pdf"];
-        pdfjsLib.GlobalWorkerOptions.workerSrc =
-            "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js";
-    </script>
 </head>
-
 <body>
     <header
         class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent text-[#16113B] px-4 bg-white shadow-lg ">
@@ -74,7 +66,8 @@
                         </div>
                     </div>
                     <ul class="px-5 flex flex-col font-montserrat text-[#404A3D] text-[16px]">
-                        <li class="border-b-[1px] border-gray-200 py-3 cursor-pointer"><a href="kompani.htm">О компании</a></li>
+                        <li class="border-b-[1px] border-gray-200 py-3 cursor-pointer"><a href="kompani.htm">О
+                                компании</a></li>
                         <li class="flex flex-col border-b-[1px] border-gray-200 py-3 cursor-pointer">
                             <button id="toggleSubmenu"
                                 class="flex items-center justify-between w-full text-left text-[#404A3D]">
@@ -91,7 +84,8 @@
                         </ul>
                         <li class="border-b-[1px] border-gray-200 py-3 cursor-pointer"><a href="kataloq.htm">Каталог</a></li>
                         <li class="border-b-[1px] border-gray-200 py-3 cursor-pointer"><a href="kontakt.htm">Контакты</a></li>
-                        <li class="border-b-[1px] border-gray-200 py-3 cursor-pointer"><a href="videobzor.htm">Видеобзоры</a></li>
+                        <li class="border-b-[1px] border-gray-200 py-3 cursor-pointer"><a
+                                href="videobzor.htm">Видеобзоры</a></li>
                         <li class="border-b-[1px] border-gray-200 py-3 cursor-pointer"><a href="#">Блог</a></li>
                     </ul>
                     <button class="relative overflow-hidden px-6 py-3 rounded-xl text-white font-semibold mt-5 mx-5">
@@ -105,48 +99,39 @@
             </div>
         </div>
     </header>
-    <main class="font-montserrat container mx-auto pt-[150px] pb-[30px]">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="flex font-montserrat pdf-item flex-col w-[300px] relative group cursor-pointer"
-                data-pdf="files/protokol-1.pdf" style="width: 300px;">
-                <img class="h-[350px] object-cover" src="img/dokument.png" alt="" />
+    <main class="flex flex-col lg:flex-row gap-8 container mx-auto px-4 py-8 font-montserrat pt-[150px] pb-[30px]">
+        <div
+            class="w-full lg:w-1/2 bg-gradient-to-l from-[#575671] to-[#231C39] text-white p-6 rounded-[20px] flex flex-col items-center">
+            <div class="p-4 inline-block rounded-md">
+                <img src="img/galvalogo.webp" alt="Logo"
+                    class="w-[200px] h-auto object-contain filter brightness-0 invert" />
+            </div>
+            <hr class="border-none h-[1px] w-full bg-white my-5">
 
-                <div
-                    class="absolute h-[350px] inset-0 bg-gray-700 bg-opacity-50 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md">
+            <div class="space-y-2 text-[15px] md:text-[20px] font-semibold">
+                <div>
+                    <a href="mailto:info@galva-tech.ru" class="flex items-center">
+                        <i class="fa-solid fa-envelope-open-text mr-2"></i>info@galva-tech.ru
+                    </a>
                 </div>
-                <h4 class="mt-2 text-[22px] font-bold text-center">Протокол испытаний</h4>
-                <button onclick="openPdfModal('files/protokol-1.pdf')"
-                    class="btn-view bg-[#16113B] border py-2 border-[#16113B] rounded-[20px] text-white hover:bg-white hover:text-[#333] duration-400 transition-all ease-in-out mt-3">
-                    <i class="fa-solid fa-eye"></i>просмотреть PDF
-                </button>
-                <a href="files/protokol-1.pdf" download
-                    class="btn-download bg-[#444163] border py-2 border-[#444163] rounded-[20px] text-white hover:bg-white hover:text-[#333] duration-400 transition-all ease-in-out mt-2 flex justify-center items-center gap-2">
-                    <i class="fa-solid fa-download"></i>скачать PDF
-                </a>
+                <div>
+                    <a href="https://wa.me/79055556025" target="_blank" class="flex items-center">
+                        <i class="fa-brands fa-whatsapp mr-2"></i>+7 905 555 60 25
+                    </a>
+                </div>
+                <div><i class="fa-solid fa-location-dot mr-2"></i>Московская область, г.о. Солнечногорск, пгт.
+                    Андреевка, д.31в</div>
+                <div><i class="fa-solid fa-clock mr-2"></i>Режим работы пн-пт 9:00-18:00</div>
             </div>
         </div>
 
-        <div id="flipbookContainer"
-            class="hidden fixed top-0 left-0 w-full h-full bg-black/80 z-50 flex items-center justify-center">
-            <div id="flipbook" class="df-flipbook df-touch" data-df-config='{
-                    "source": "files/protokol-1.pdf",
-                    "webgl": true,
-                    "backgroundColor": "#fff"
-                }'>
-            </div>
-        </div>
-        <div id="pdfModal"
-            class="fixed top-0 left-0 w-full h-full bg-black/50 hidden justify-center items-center z-[1000]">
-            <div class="bg-white p-6 h-[100vh] overflow-auto relative rounded-lg">
-                <button id="closeModal"
-                    class="absolute top-6 right-6 text-[30px] text-black hover:text-red-600">⛌</button>
-                <canvas id="pdf-canvas" class="mx-auto border h-100vh w-[400px]"></canvas>
-                <div class="flex justify-center items-center gap-4 mt-4">
-                    <button id="prevPage" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">←</button>
-                    <span><span id="pageNum">0</span> / <span id="pageCount">0</span></span>
-                    <button id="nextPage" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">→</button>
-                </div>
-            </div>
+        <!-- Sağ tərəf: xəritə -->
+        <div class="w-full lg:w-1/2 rounded-[20px] shadow-md">
+            <iframe class="rounded-[20px]"
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d142460.1198700414!2d36.88027810578174!3d56.08896575791765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0JzQvtGB0LrQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsINCzLtC-LiDQodC-0LvQvdC10YfQvdC-0LPQvtGA0YHQuiwg0L_Qs9GCLiDQkNC90LTRgNC10LXQstC60LAsINC0LjMx0LI!5e0!3m2!1sen!2saz!4v1754462554942!5m2!1sen!2saz"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div>
     </main>
     <div class="bg-[#16113B] py-8">
@@ -275,65 +260,7 @@
             </div>
         </div>
     </footer>
-    <!-- JQuery və DearFlip JS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dearflip@2.0.0/dist/jquery.dearflip.min.js"></script>
-
-    <script>
-        let pdfDoc = null;
-        let currentPage = 1;
-        let totalPages = 0;
-        const scale = 1.5;
-        const canvas = document.getElementById("pdf-canvas");
-        const ctx = canvas.getContext("2d");
-
-        function openPdfModal(url) {
-            document.getElementById("pdfModal").classList.remove("hidden");
-            pdfjsLib.getDocument(url).promise.then(function (pdfDoc_) {
-                pdfDoc = pdfDoc_;
-                totalPages = pdfDoc.numPages;
-                document.getElementById("pageCount").textContent = totalPages;
-                renderPage(currentPage);
-            });
-        }
-
-        function renderPage(num) {
-            pdfDoc.getPage(num).then(function (page) {
-                const viewport = page.getViewport({ scale: scale });
-                canvas.height = viewport.height;
-                canvas.width = viewport.width;
-
-                const renderContext = {
-                    canvasContext: ctx,
-                    viewport: viewport,
-                };
-                page.render(renderContext);
-                document.getElementById("pageNum").textContent = num;
-            });
-        }
-
-        document.getElementById("prevPage").addEventListener("click", () => {
-            if (currentPage <= 1) return;
-            currentPage--;
-            renderPage(currentPage);
-        });
-
-        document.getElementById("nextPage").addEventListener("click", () => {
-            if (currentPage >= totalPages) return;
-            currentPage++;
-            renderPage(currentPage);
-        });
-
-        document.getElementById("closeModal").addEventListener("click", () => {
-            document.getElementById("pdfModal").classList.add("hidden");
-            currentPage = 1;
-            pdfDoc = null;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-        });
-    </script>
     <script src="script.js"></script>
-
-
 </body>
 
 </html>
