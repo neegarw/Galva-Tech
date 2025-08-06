@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Sidebar açılıb-bağlanması
     const openBtn = document.getElementById('openSidebar');
     const closeBtn = document.getElementById('closeSidebar');
     const sidebar = document.getElementById('sidebar');

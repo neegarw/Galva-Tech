@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body class="bg-gray-50 font-sans">
+    <header
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent text-[#16113B] px-4 bg-white shadow-lg ">
+        <div class="container mx-auto flex flex-row items-center justify-between py-[20px]">
+            <div class="flex items-center gap-5">
+                <div>
+                    <a href="index.htm">
+                        <img id="logoImage" class="transition-all duration-300 cursor-pointer" src="img/galvalogo.webp"
+                            alt="logo">
+                    </a>
+                </div>
+                <nav class="hidden lg:flex">
+                    <ul class="flex gap-[23px] font-montserrat text-[15px] whitespace-nowrap font-medium">
+                        <li class="py-2 cursor-pointer"><a href="kompani.htm">О компании</a></li>
+                        <li class="relative group cursor-pointer py-2">
+                            <div class="flex items-center gap-1 cursor-pointer">
+                                Клиентам <i class="fa-solid fa-angle-down"></i>
+                            </div>
+                            <div
+                                class="absolute left-0 top-full mt-2 bg-white shadow-lg p-3 rounded-md w-[150px] z-50 border-t-4 border-[#ECDD5D] opacity-0 invisible group-hover:opacity-100 group-hover:visible  transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0">
+                                <a href="galereya.htm"
+                                    class="block px-4 py-2 hover:bg-gray-100 rounded-md mb-2 text-sm text-[#404A3D] font-montserrat">Галерея</a>
+                                <a href="dokument.htm"
+                                    class="block px-4 py-2 hover:bg-gray-100 rounded-md text-sm text-[#404A3D] font-montserrat">Документы</a>
+                            </div>
+                        </li>
+                        <li class="py-2 cursor-pointer"><a href="kataloq.htm">Каталог</a></li>
+                        <li class="py-2 cursor-pointer"><a href="videobzor.htm">Видеобзоры</a></li>
+                        <li class="py-2 cursor-pointer">Блог</li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="flex items-center gap-[7px]">
+                <div class="flex items-center cursor-pointer">
+                    <span><i class="fa-brands fa-whatsapp text-[23px]"></i></span>
+                    <div class="flex flex-col font-montserrat whitespace-nowrap">
+                        <span>+7 905 555 60 25</span>
+                        <span>пн-пт: 9:00-18:00</span>
+                    </div>
+                </div>
+                <span id="openSidebar" class="block lg:hidden cursor-pointer"><i
+                        class="fa-solid fa-bars text-[20px] font-light"></i></span>
+                <div id="sidebar"
+                    class="fixed top-0 right-0 h-full w-[350px] max-w-full bg-white shadow-lg z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+                    <div class="px-5 pt-5 flex justify-between items-center ">
+                        <div class="border-b-[1px] border-gray-200 w-full flex items-center justify-between">
+                            <div><img class="w-[150px] h-[60px] cursor-pointer" src="img/galvalogo.webp" alt="logo">
+                            </div>
+                            <button id="closeSidebar" class="text-[#16113B] text-xl cursor-pointer">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <ul class="px-5 flex flex-col font-montserrat text-[#404A3D] text-[16px]">
+                        <li class="border-b-[1px] border-gray-200 py-3 cursor-pointer"><a href="kompani.htm">О компании</a></li>
+                        <li class="flex flex-col border-b-[1px] border-gray-200 py-3 cursor-pointer">
+                            <button id="toggleSubmenu"
+                                class="flex items-center justify-between w-full text-left text-[#404A3D]">
+                                Клиентам <i class="fa-solid fa-angle-down transition-transform" id="arrowIcon"></i>
+                            </button>
+                        </li>
+                        <ul id="submenu" class="flex-col pl-4 mt-2 hidden">
+                            <li class="w-full border-b-[1px] py-3 border-gray-200 cursor-pointer">
+                                <a href="galereya.htm" class="text-[#404A3D]">Галерея</a>
+                            </li>
+                            <li class="w-full border-b-[1px] py-3 border-gray-200 cursor-pointer">
+                                <a href="dokument.htm" class="text-[#404A3D]">Документы</a>
+                            </li>
+                        </ul>
+                        <li class="border-b-[1px] border-gray-200 py-3 cursor-pointer"><a href="kataloq.htm">Каталог</a></li>
+                        <li class="border-b-[1px] border-gray-200 py-3 cursor-pointer"><a href="videobzor.htm">Видеобзоры</a></li>
+                        <li class="border-b-[1px] border-gray-200 py-3 cursor-pointer"><a href="#">Блог</a></li>
+                    </ul>
+                    <button class="relative overflow-hidden px-6 py-3 rounded-xl text-white font-semibold mt-5 mx-5">
+                        <span class="relative z-10">Получить консультацию</span>
+                        <span class="absolute inset-0 z-0 bg-stripe animate-stripe-move rounded-xl"></span>
+                    </button>
+                </div>
+                <button id="consultBtn" class="bg-[#16113B] py-[10px] px-[25px] font-montserrat text-white text-[16px] rounded-[7px] hidden lg:flex ml-3">Получить консультацию</button>
+            </div>
+        </div>
+    </header>
+    <main class="container mx-auto pt-[140px] pb-[30px] font-montserrat">
+        <div class="flex flex-col text-[25px] md:flex-row mb-6 justify-center items-center">
+            <button id="btn1"
+                class="px-16 sm:w-[320px] w-[90%] py-6 rounded-t-lg border border-[#16113B] bg-[#16113B] text-white transition-colors">
+                Оборудование
+            </button>
+            <button id="btn2"
+                class="px-16 sm:w-[320px] w-[90%] py-6 rounded-t-lg border border-[#16113B] bg-transparent text-[#16113B] transition-colors">
+                Покрытия
+            </button>
+        </div>
+
+        <div id="gallery1" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div><img src="img/galeri1.jpg" alt="" class="w-full h-[360px] rounded-[20px] object-cover shadow" /></div>
+            <div><img src="img/galeri1.jpg" alt="" class="w-full h-[360px] rounded-[20px] object-cover shadow" /></div>
+            <div><img src="img/galeri1.jpg" alt="" class="w-full h-[360px] rounded-[20px] object-cover shadow" /></div>
+            <div><img src="img/galeri1.jpg" alt="" class="w-full h-[360px] rounded-[20px] object-cover shadow" /></div>
+            <div><img src="img/galeri1.jpg" alt="" class="w-full h-[360px] rounded-[20px] object-cover shadow" /></div>
+            <div><img src="img/galeri1.jpg" alt="" class="w-full h-[360px] rounded-[20px] object-cover shadow" /></div>
+        </div>
+
+        <div id="gallery2" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div><img src="img/galeri2.png" alt="" class="w-full h-[360px] rounded-[20px] object-cover shadow" /></div>
+            <div><img src="img/galeri2.png" alt="" class="w-full h-[360px] rounded-[20px] object-cover shadow" /></div>
+            <div><img src="img/galeri2.png" alt="" class="w-full h-[360px] rounded-[20px] object-cover shadow" /></div>
+            <div><img src="img/galeri2.png" alt="" class="w-full h-[360px] rounded-[20px] object-cover shadow" /></div>
+            <div><img src="img/galeri2.png" alt="" class="w-full h-[360px] rounded-[20px] object-cover shadow" /></div>
+            <div><img src="img/galeri2.png" alt="" class="w-full h-[360px] rounded-[20px] object-cover shadow" /></div>
+        </div>
+    </main>
+    <div class="bg-[#16113B] py-8">
+        <div
+            class="bg-white container flex flex-col lg:flex-row rounded-xl gap-3 md:items-start items-stretch mx-auto font-montserrat px-8 py-20">
+            <div class="text-[24px] md:text-[40px] font-bold text-[#404A3D] flex items-start w-full lg:w-[50%]">
+                <span class="text-[40px]">👋 </span>
+                <div>Заполните все поля и мы с вами свяжемся!</div>
+            </div>
+            <form class="text-[#171717] flex flex-col items-stretch" action="">
+                <div class="relative w-full h-[80px] bg-[#FAFAF9]">
+                    <textarea
+                        class="peer bg-[#FAFAF9] w-full h-[80px] py-5 px-5 rounded-lg border resize-none outline-none"
+                        name="" id="" required></textarea>
+                    <div
+                        class="absolute top-4 left-3 text-gray-500 transition-all duration-200 peer-focus:top-1 peer-focus:text-xs peer-valid:top-1 peer-valid:text-xs">
+                        Напишите как мы можем вам помочь</div>
+                </div>
+                <div class="flex w-full flex-col md:flex-row gap-4 mt-4">
+                    <div class="relative w-full md:w-[250px]">
+                        <input class="peer bg-[#FAFAF9] w-full h-[50px] py-5 px-5 rounded-lg border outline-none"
+                            type="text" name="" id="" required>
+                        <div
+                            class="absolute top-4 left-3 text-gray-500 transition-all duration-200 peer-focus:top-1 peer-focus:text-xs peer-valid:top-1 peer-valid:text-xs">
+                            Ваше имя</div>
+                    </div>
+                    <div class="relative w-full md:w-[250px]">
+                        <input class="peer bg-[#FAFAF9] w-full h-[50px] px-5 py-5 rounded-lg border outline-none"
+                            type="number" name="" id="" required>
+                        <div
+                            class="absolute top-4 left-3 text-gray-500 transition-all duration-200 peer-focus:top-1 peer-focus:text-xs peer-valid:top-1 peer-valid:text-xs">
+                            Номер телефона</div>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-4 mt-4 items-center">
+                    <div class="relative w-full md:w-[250px]">
+                        <input class="peer bg-[#FAFAF9] w-full h-[50px] py-5 px-5 rounded-lg border outline-none"
+                            type="email" name="" id="" required>
+                        <div
+                            class="absolute top-4 left-3 text-gray-500 transition-all duration-200 peer-focus:top-1 peer-focus:text-xs peer-valid:top-1 peer-valid:text-xs">
+                            Почта</div>
+                    </div>
+                    <button
+                        class="bg-[#16113B] w-full md:w-[250px] h-[42px] rounded-lg text-white mt-4 md:mt-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                        Получить консультацию
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="font-montserrat px-4 py-8 container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div class="col-span-1 md:col-span-2 lg:col-span-2">
+                    <div>
+                        <img src="img/galvalogo.webp" alt="">
+                    </div>
+                    <div class="mt-4 text-[#333] text-[16px]">
+                        Наша цель - предоставлять промышленным предприятиям полный цикл гальванических решений —
+                        от
+                        оборудования и расходников до техподдержки — с высоким качеством и оптимальной ценой.
+                    </div>
+                    <div class="flex gap-4 mt-4 text-xl">
+                        <div
+                            class="w-[40px] h-[40px] rounded-full bg-[#F8F7F0] text-[#16113B] flex items-center justify-center border border-[#16113B] hover:bg-[#16113B] hover:text-[#F8F7F0] transition-all ease-in-out duration-300">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div
+                            class="w-[40px] h-[40px] rounded-full bg-[#F8F7F0] text-[#16113B] flex items-center justify-center border border-[#16113B] hover:bg-[#16113B] hover:text-[#F8F7F0] transition-all ease-in-out duration-300">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div
+                            class="w-[40px] h-[40px] rounded-full bg-[#F8F7F0] text-[#16113B] flex items-center justify-center border border-[#16113B] hover:bg-[#16113B] hover:text-[#F8F7F0] transition-all ease-in-out duration-300">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-span-1">
+                    <div class="font-semibold mb-5 text-[20px] text-[#404A3D]">О компании</div>
+                    <div class="flex flex-col gap-2 text-sm text-[#333]">
+                        <span>О компании</span>
+                        <span>Галерея</span>
+                        <span>Документы</span>
+                        <span>Каталог</span>
+                        <span>Блог</span>
+                    </div>
+                </div>
+                <div class="col-span-1">
+                    <div class="font-semibold mb-5 text-[20px] text-[#404A3D]">Режим работы</div>
+                    <div class="flex flex-col gap-3 text-sm text-[#333]">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-regular fa-clock"></i>
+                            <span>Режим работы пн-пт 9:00-18:00</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@galva-tech.ru</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-phone-volume"></i>
+                            <span>+7 905 555 60 25</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                    <div class="font-semibold mb-5 text-[20px] text-[#404A3D]">Адрес</div>
+                    <div class="flex items-start  gap-2 text-sm text-[#333]">
+                        <i class="fa-solid fa-location-dot py-2"></i>
+                        <span>Московская область, г.о. Солнечногорск, пгт. Андреевка, д.31в</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mx-auto container">
+            <hr>
+        </div>
+        <div
+            class="container mx-auto flex flex-col-reverse lg:flex-row justify-between items-start py-6 px-4 md:px-0 gap-3">
+            <div class="text-[16px] font-montserrat text-[#404A3D]">
+                <span class="px-1">© 2025</span>
+                <span class="underline hover:no-underline font-semibold">Galva Technologies</span>
+            </div>
+            <div>
+                <img class="w-[150px] h-[43px] object-cover" src="img/jeywa-logo.webp" alt="">
+            </div>
+        </div>
+    </footer>
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center hidden z-50">
+        <div class="relative max-w-3xl w-full px-4">
+            <button id="closeModal" class="absolute top- right-[-40px] text-white text-3xl font-bold">&times;</button>
+            <img id="modalImage" src="" alt="Full Size" class="w-full h-auto rounded shadow-lg" />
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script defer>
+        document.addEventListener("DOMContentLoaded", () => {
+            const btn1 = document.getElementById("btn1");
+            const btn2 = document.getElementById("btn2");
+            const gallery1 = document.getElementById("gallery1");
+            const gallery2 = document.getElementById("gallery2");
+
+            function activateButton(activeBtn, inactiveBtn) {
+                // Aktiv düyməyə class əlavə et
+                activeBtn.classList.add("bg-[#16113B]", "text-white");
+                activeBtn.classList.remove("border", "border-[#16113B]", "bg-transparent", "text-[#16113B]");
+
+                // Passiv düyməyə border-ləri və rəngi əlavə et
+                inactiveBtn.classList.remove("bg-[#16113B]", "text-white");
+                inactiveBtn.classList.add("border", "border-[#16113B]", "bg-transparent", "text-[#16113B]");
+            }
+
+
+            btn1.addEventListener("click", () => {
+                gallery1.classList.remove("hidden");
+                gallery2.classList.add("hidden");
+                activateButton(btn1, btn2);
+            });
+
+            btn2.addEventListener("click", () => {
+                gallery2.classList.remove("hidden");
+                gallery1.classList.add("hidden");
+                activateButton(btn2, btn1);
+            });
+        });
+    </script>
+    <script>
+        const allImages = document.querySelectorAll('#gallery1 img, #gallery2 img');
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeBtn = document.getElementById('closeModal');
+
+        // Hər şəkil üçün klik event listener
+        allImages.forEach(img => {
+            img.addEventListener('click', () => {
+                modal.classList.remove('hidden');
+                modalImg.src = img.src;
+            });
+        });
+
+        // Modalı bağlamaq üçün
+        closeBtn.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            modalImg.src = '';
+        });
+
+        // Arxa fon kliklənəndə modal bağlansın
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+                modalImg.src = '';
+            }
+        });
+    </script>
+
+</body>
+
+</html>

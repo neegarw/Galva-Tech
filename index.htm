@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galva-Tech</title>
     <link href="./output.css" rel="stylesheet">
-    <link href="./output.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         html,
@@ -142,33 +138,30 @@
         }
     </style>
 </head>
-
 <body>
-    <header id="mainHeader"
-        class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent text-white px-4 ">
+    <header id="mainHeader" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent text-white px-4 ">
         <div class="container mx-auto flex flex-row items-center justify-between py-[20px]">
             <div class="flex items-center gap-5">
-                <div>
-                    <img id="logoImage" class="transition-all duration-300 filter brightness-0 invert cursor-pointer"
-                        src="img/galvalogo.webp" alt="logo">
-                </div>
+                <a href="index.htm">
+                    <img id="logoImage" class="transition-all duration-300 filter brightness-0 invert cursor-pointer" src="img/galvalogo.webp" alt="logo">
+                </a>
                 <nav class="hidden lg:flex">
                     <ul class="flex gap-[23px] font-montserrat text-[15px] whitespace-nowrap font-medium">
-                        <li class="py-2 cursor-pointer">О компании</li>
+                        <li class="py-2 cursor-pointer"><a href="kompani.htm">О компании</a></li>
                         <li class="relative group cursor-pointer py-2">
                             <div class="flex items-center gap-1 cursor-pointer">
                                 Клиентам <i class="fa-solid fa-angle-down"></i>
                             </div>
                             <div
                                 class="absolute left-0 top-full mt-2 bg-white shadow-lg p-3 rounded-md w-[150px] z-50 border-t-4 border-[#ECDD5D] opacity-0 invisible group-hover:opacity-100 group-hover:visible  transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0">
-                                <a href="#"
+                                <a href="galereya.htm"
                                     class="block px-4 py-2 hover:bg-gray-100 rounded-md mb-2 text-sm text-[#404A3D] font-montserrat">Галерея</a>
-                                <a href="#"
+                                <a href="dokument.htm"
                                     class="block px-4 py-2 hover:bg-gray-100 rounded-md text-sm text-[#404A3D] font-montserrat">Документы</a>
                             </div>
                         </li>
-                        <li class="py-2 cursor-pointer">Каталог</li>
-                        <li class="py-2 cursor-pointer">Видеобзоры</li>
+                        <li class="py-2 cursor-pointer"><a href="kataloq.htm">Каталог</a></li>
+                        <li class="py-2 cursor-pointer"><a href="videobzor.htm">Видеобзоры</a></li>
                         <li class="py-2 cursor-pointer">Блог</li>
                     </ul>
                 </nav>
@@ -187,15 +180,14 @@
                     class="fixed top-0 right-0 h-full w-[350px] max-w-full bg-white shadow-lg z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
                     <div class="px-5 pt-5 flex justify-between items-center ">
                         <div class="border-b-[1px] border-gray-200 w-full flex items-center justify-between">
-                            <div><img class="w-[150px] h-[60px] cursor-pointer" src="img/galvalogo.webp" alt="logo">
-                            </div>
+                            <a href="index.htm"><img class="w-[150px] h-[60px] cursor-pointer block" src="img/galvalogo.webp" alt="logo"></a>
                             <button id="closeSidebar" class="text-[#16113B] text-xl cursor-pointer">
                                 <i class="fa-solid fa-xmark"></i>
                             </button>
                         </div>
                     </div>
                     <ul class="px-5 flex flex-col font-montserrat text-[#404A3D] text-[16px]">
-                        <li class="border-b-[1px] border-gray-200 py-3 cursor-pointer"><a href="#">О компании</a></li>
+                        <li class="border-b-[1px] border-gray-200 py-3 cursor-pointer"><a href="kompani.htm">О компании</a></li>
                         <li class="flex flex-col border-b-[1px] border-gray-200 py-3 cursor-pointer">
                             <button id="toggleSubmenu"
                                 class="flex items-center justify-between w-full text-left text-[#404A3D]">
@@ -204,14 +196,14 @@
                         </li>
                         <ul id="submenu" class="flex-col pl-4 mt-2 hidden">
                             <li class="w-full border-b-[1px] py-3 border-gray-200 cursor-pointer">
-                                <a href="#" class="text-[#404A3D]">Галерея</a>
+                                <a href="galereya.htm" class="text-[#404A3D]">Галерея</a>
                             </li>
                             <li class="w-full border-b-[1px] py-3 border-gray-200 cursor-pointer">
-                                <a href="#" class="text-[#404A3D]">Документы</a>
+                                <a href="dokument.htm" class="text-[#404A3D]">Документы</a>
                             </li>
                         </ul>
-                        <li class="border-b-[1px] border-gray-200 py-3 cursor-pointer"><a href="#">Каталог</a></li>
-                        <li class="border-b-[1px] border-gray-200 py-3 cursor-pointer"><a href="#">Видеобзоры</a></li>
+                        <li class="border-b-[1px] border-gray-200 py-3 cursor-pointer"><a href="kataloq.htm">Каталог</a></li>
+                        <li class="border-b-[1px] border-gray-200 py-3 cursor-pointer"><a href="videobzor.htm">Видеобзоры</a></li>
                         <li class="border-b-[1px] border-gray-200 py-3 cursor-pointer"><a href="#">Блог</a></li>
                     </ul>
                     <button class="relative overflow-hidden px-6 py-3 rounded-xl text-white font-semibold mt-5 mx-5">
@@ -644,7 +636,6 @@
         <footer>
             <div class="font-montserrat px-4 py-8 container mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-                    <!-- 1-ci blok -->
                     <div class="col-span-1 md:col-span-2 lg:col-span-2">
                         <div>
                             <img src="img/galvalogo.webp" alt="">
